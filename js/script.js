@@ -22,8 +22,9 @@ const playButton = document.getElementById('play-button');
 
 function play(){
 
-   
     let numBox;
+    const contenitoreMain = document.getElementById('contenitore-main');
+    contenitoreMain.innerHTML = '';
     const livelliDifficoltaHTML = document.getElementById('livelli-difficolta');
     const livelli = livelliDifficoltaHTML.value;
 
@@ -31,19 +32,22 @@ function play(){
     switch(livelli){
         case '1':
             default:
+
             numBox = 100;
             break;
-            case '2':
+
+        case '2':
              numBox = 81;
             break;
-          case '3':
+
+        case '3':
             numBox = 49;
             break;
     } 
 
       //CREO FUNZIONE PER CREARE DIV FIELD GAME CHE CONTERRA' I DIV BOXES
     function creaGriglia(){
-        const contenitoreMain = document.getElementById('contenitore-main');
+        
         const griglia = document.createElement('div');
         griglia.className = 'field-game';
         
@@ -57,8 +61,11 @@ function play(){
 
     //CREO FUNZIONE PER CREARE BOX DA INSERIRE DENTRO IL FIELD
     function creaBox(num){
-         const box = document.createElement('div');
+        const box = document.createElement('div');
         box.className = 'boxes'; 
+        const spaceLevel = Math.sqrt(numBox);
+        box.style.width = `calc(100% / ${spaceLevel})`;
+        box.style.height = `calc(100% / ${spaceLevel})`;
         box.innerHTML = `
         <span> ${num}</span>
         `;   
