@@ -47,3 +47,13 @@ footer{
     align-items: center;
     justify-content: center;
 }
+
+/* EFFETTI BG COLOR */
+
+.bg-blu{
+    background-color: lightskyblue;
+}
+
+.bg.rosso{
+    background-color: red;
+}

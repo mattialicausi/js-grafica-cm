@@ -7,14 +7,9 @@ ed emetto un messaggio in console con il numero della cella cliccata.*/
 
 //ROCEDIMENTO
 /* 
-creare un div contenitore e assegnare classi per renderlo quadrato e con i bordi
-creare all'interno dei box 50/50px 
-inserire dei numeri che crescono
 
-            <div id="field-game">
-                <div class="boxes">1</div>
 
-            </div>
+     
 
 */
 
@@ -32,7 +27,6 @@ function play(){
     switch(livelli){
         case '1':
             default:
-
             numBox = 100;
             break;
 
@@ -69,6 +63,11 @@ function play(){
         box.innerHTML = `
         <span> ${num}</span>
         `;   
+
+        //AGGIUNGO EVENTO CLICK PER CAMBIARE BG COLOR AGGIUNGENDO CLASSI CSS
+        box.addEventListener('click', function(){
+            box.classList.add('bg-blu');
+        })
          return box;  
     }
  
