@@ -21,3 +21,29 @@ footer{
     width: 80%;
     margin: 0 auto
 }
+
+/* MODIFICO MAIN */
+
+#contenitore-main{
+    display: flex;
+    align-items: center;
+}
+
+.field-game{
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.boxes{
+    height: calc(100% / 10);
+    width: calc(100% / 10);
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
